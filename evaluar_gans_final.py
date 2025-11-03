@@ -13,6 +13,50 @@ from sklearn.metrics import accuracy_score, classification_report
 # --- CONFIGURACIÓN ---
 # ¡IMPORTANTE! Añade aquí TODOS los archivos .h5 de tus generadores GAN
 
+# MODELOS_GAN_A_EVALUAR = [
+#     # Modelos de epoch 5 en 5 (del 5 al 50)
+#     'generador_gan_epoch_5.h5', 'generador_gan_epoch_10.h5',
+#     'generador_gan_epoch_15.h5', 'generador_gan_epoch_20.h5',
+#     'generador_gan_epoch_25.h5', 'generador_gan_epoch_30.h5',
+#     'generador_gan_epoch_35.h5', 'generador_gan_epoch_40.h5',
+#     'generador_gan_epoch_45.h5', 'generador_gan_epoch_50.h5',
+#
+#     # Modelos de epoch consecutivos (del 55 al 111)
+#     'generador_gan_epoch_55.h5', 'generador_gan_epoch_56.h5',
+#     'generador_gan_epoch_57.h5', 'generador_gan_epoch_58.h5',
+#     'generador_gan_epoch_59.h5', 'generador_gan_epoch_60.h5',
+#     'generador_gan_epoch_61.h5', 'generador_gan_epoch_62.h5',
+#     'generador_gan_epoch_63.h5', 'generador_gan_epoch_64.h5',
+#     'generador_gan_epoch_65.h5', 'generador_gan_epoch_66.h5',
+#     'generador_gan_epoch_67.h5', 'generador_gan_epoch_68.h5',
+#     'generador_gan_epoch_69.h5', 'generador_gan_epoch_70.h5',
+#     'generador_gan_epoch_71.h5', 'generador_gan_epoch_72.h5',
+#     'generador_gan_epoch_73.h5', 'generador_gan_epoch_74.h5',
+#     'generador_gan_epoch_75.h5', 'generador_gan_epoch_76.h5',
+#     'generador_gan_epoch_77.h5', 'generador_gan_epoch_78.h5',
+#     'generador_gan_epoch_79.h5', 'generador_gan_epoch_80.h5',
+#     'generador_gan_epoch_81.h5', 'generador_gan_epoch_82.h5',
+#     'generador_gan_epoch_83.h5', 'generador_gan_epoch_84.h5',
+#     'generador_gan_epoch_85.h5', 'generador_gan_epoch_86.h5',
+#     'generador_gan_epoch_87.h5', 'generador_gan_epoch_88.h5',
+#     'generador_gan_epoch_89.h5', 'generador_gan_epoch_90.h5',
+#     'generador_gan_epoch_91.h5', 'generador_gan_epoch_92.h5',
+#     'generador_gan_epoch_93.h5', 'generador_gan_epoch_94.h5',
+#     'generador_gan_epoch_95.h5', 'generador_gan_epoch_96.h5',
+#     'generador_gan_epoch_97.h5', 'generador_gan_epoch_98.h5',
+#     'generador_gan_epoch_99.h5', 'generador_gan_epoch_100.h5',
+#     'generador_gan_epoch_101.h5', 'generador_gan_epoch_102.h5',
+#     'generador_gan_epoch_103.h5', 'generador_gan_epoch_104.h5',
+#     'generador_gan_epoch_105.h5', 'generador_gan_epoch_106.h5',
+#     'generador_gan_epoch_107.h5', 'generador_gan_epoch_108.h5',
+#     'generador_gan_epoch_109.h5', 'generador_gan_epoch_110.h5',
+#     'generador_gan_epoch_111.h5',
+#
+#     # Modelos adicionales
+#     'generador_gan.h5', 'generador_gan_2.h5', 'generador_gan_3.h5',
+#     'generador_gan_4.h5', 'generador_gan_5.h5', 'generador_gan_6.h5'
+# ]
+
 MODELOS_GAN_A_EVALUAR = [
     # Modelos de epoch 5 en 5 (del 5 al 50)
     'generador_gan_epoch_5.h5', 'generador_gan_epoch_10.h5',
@@ -20,41 +64,23 @@ MODELOS_GAN_A_EVALUAR = [
     'generador_gan_epoch_25.h5', 'generador_gan_epoch_30.h5',
     'generador_gan_epoch_35.h5', 'generador_gan_epoch_40.h5',
     'generador_gan_epoch_45.h5', 'generador_gan_epoch_50.h5',
-
-    # Modelos de epoch consecutivos (del 55 al 111)
-    'generador_gan_epoch_55.h5', 'generador_gan_epoch_56.h5',
-    'generador_gan_epoch_57.h5', 'generador_gan_epoch_58.h5',
-    'generador_gan_epoch_59.h5', 'generador_gan_epoch_60.h5',
-    'generador_gan_epoch_61.h5', 'generador_gan_epoch_62.h5',
-    'generador_gan_epoch_63.h5', 'generador_gan_epoch_64.h5',
-    'generador_gan_epoch_65.h5', 'generador_gan_epoch_66.h5',
-    'generador_gan_epoch_67.h5', 'generador_gan_epoch_68.h5',
-    'generador_gan_epoch_69.h5', 'generador_gan_epoch_70.h5',
-    'generador_gan_epoch_71.h5', 'generador_gan_epoch_72.h5',
-    'generador_gan_epoch_73.h5', 'generador_gan_epoch_74.h5',
-    'generador_gan_epoch_75.h5', 'generador_gan_epoch_76.h5',
-    'generador_gan_epoch_77.h5', 'generador_gan_epoch_78.h5',
-    'generador_gan_epoch_79.h5', 'generador_gan_epoch_80.h5',
-    'generador_gan_epoch_81.h5', 'generador_gan_epoch_82.h5',
-    'generador_gan_epoch_83.h5', 'generador_gan_epoch_84.h5',
-    'generador_gan_epoch_85.h5', 'generador_gan_epoch_86.h5',
-    'generador_gan_epoch_87.h5', 'generador_gan_epoch_88.h5',
-    'generador_gan_epoch_89.h5', 'generador_gan_epoch_90.h5',
-    'generador_gan_epoch_91.h5', 'generador_gan_epoch_92.h5',
-    'generador_gan_epoch_93.h5', 'generador_gan_epoch_94.h5',
-    'generador_gan_epoch_95.h5', 'generador_gan_epoch_96.h5',
-    'generador_gan_epoch_97.h5', 'generador_gan_epoch_98.h5',
-    'generador_gan_epoch_99.h5', 'generador_gan_epoch_100.h5',
-    'generador_gan_epoch_101.h5', 'generador_gan_epoch_102.h5',
-    'generador_gan_epoch_103.h5', 'generador_gan_epoch_104.h5',
-    'generador_gan_epoch_105.h5', 'generador_gan_epoch_106.h5',
-    'generador_gan_epoch_107.h5', 'generador_gan_epoch_108.h5',
-    'generador_gan_epoch_109.h5', 'generador_gan_epoch_110.h5',
-    'generador_gan_epoch_111.h5',
-
+    'generador_gan_epoch_55.h5', 'generador_gan_epoch_60.h5',
+    'generador_gan_epoch_65.h5', 'generador_gan_epoch_70.h5',
+    'generador_gan_epoch_75.h5', 'generador_gan_epoch_80.h5',
+    'generador_gan_epoch_85.h5', 'generador_gan_epoch_90.h5',
+    'generador_gan_epoch_95.h5', 'generador_gan_epoch_100.h5',
+    'generador_gan_epoch_105.h5', 'generador_gan_epoch_110.h5',
+    'generador_gan_epoch_115.h5', 'generador_gan_epoch_120.h5',
+    'generador_gan_epoch_125.h5', 'generador_gan_epoch_130.h5',
+    'generador_gan_epoch_135.h5', 'generador_gan_epoch_140.h5',
+    'generador_gan_epoch_145.h5', 'generador_gan_epoch_150.h5',
+    'generador_gan_epoch_155.h5', 'generador_gan_epoch_160.h5',
+    'generador_gan_epoch_165.h5', 'generador_gan_epoch_170.h5',
+    'generador_gan_epoch_175.h5', 'generador_gan_epoch_180.h5',
+    'generador_gan_epoch_185.h5', 'generador_gan_epoch_190.h5',
+    'generador_gan_epoch_195.h5', 'generador_gan_epoch_200.h5',
     # Modelos adicionales
-    'generador_gan.h5', 'generador_gan_2.h5', 'generador_gan_3.h5',
-    'generador_gan_4.h5', 'generador_gan_5.h5', 'generador_gan_6.h5'
+    'generador_gan.h5'
 ]
 
 MODEL_PATH_JUEZ = 'juez_de_calidad.h5'
@@ -121,6 +147,7 @@ def create_windows(emg, gestures, window_size, step, normalization_type='zscore'
         if normalization_type == 'zscore':
             mean, std = np.mean(window_emg, axis=0), np.std(window_emg, axis=0)
             window_normalized = (window_emg - mean) / (std + 1e-8)
+           
         elif normalization_type == 'tanh':
             min_val, max_val = np.min(window_emg), np.max(window_emg)
             window_normalized = 2 * (window_emg - min_val) / (max_val - min_val + 1e-8) - 1
@@ -170,10 +197,11 @@ if __name__ == "__main__":
 
         senales_reconstruidas_tanh = generador.predict(X_test_tanh, batch_size=BATCH_SIZE)
 
-        senal_0_1 = (senales_reconstruidas_tanh + 1) / 2.0
-        mean = np.mean(senal_0_1, axis=(1, 2), keepdims=True)
-        std = np.std(senal_0_1, axis=(1, 2), keepdims=True)
-        senales_reconstruidas_zscore = (senal_0_1 - mean) / (std + 1e-8)
+        # senal_0_1 = (senales_reconstruidas_tanh + 1) / 2.0
+        # mean = np.mean(senal_0_1, axis=(1, 2), keepdims=True)
+        # std = np.std(senal_0_1, axis=(1, 2), keepdims=True)
+        # senales_reconstruidas_zscore = (senal_0_1 - mean) / (std + 1e-8)
+        senales_reconstruidas_zscore = generador.predict(X_test_zscore, batch_size=BATCH_SIZE)
 
         puntuaciones_calidad = juez_calidad.predict(senales_reconstruidas_zscore, batch_size=BATCH_SIZE)
         predicciones_juez = (puntuaciones_calidad > UMBRAL_CALIDAD).astype(int)
